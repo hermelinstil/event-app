@@ -34,6 +34,6 @@ app.get('/', function(req, res) {
 
 /* Add catch-routes; 404, 500 */
 
-app.listen(app.get('port') function() {
+app.listen(app.get('port'), function() {
     console.log('Listening to port ' + app.get('port') + '...');
 });
