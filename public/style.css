@@ -1,0 +1,71 @@
+/** Allting smushas ihop totalt när man minskar bredden på fönstret **/
+
+body {
+    height: 920px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#content-block {
+    display: inline-block;
+    height: 920px;
+}
+
+.event-detail-container {
+    width: 65%;
+    max-width: 800px;
+    margin: 0 0;
+    float: left;
+    
+    background-image: url(img/stockholm-skyline.jpg);
+    background-size: cover;
+    box-shadow: inset 0 0 10px #000;
+}
+
+.event-description {
+    /*inline-block: Nu pushas divven till vänster trots margin. Ta bort så skjuts hela containern ner???? */
+    display: inline-block; 
+    margin: 30px auto;
+    width: 90%;
+    height:250px;
+    
+    background-color: #f8f8f8;
+    background-position: center;
+    box-shadow: 1px 1px 10px #000;
+}
+
+.event-description-text {
+    padding: 20px 40px 110px;
+}
+
+.event-list-container {
+    width: 300px;
+    margin: 0px 10px;
+    border: 1px solid;
+}
+
+.event-list-container h1 {
+    margin: 50px 20px
+}
+
+.event-list {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.list-item-container {
+    margin: 20px auto;
+    height: 40px;
+    box-shadow: 2px 2px 10px;
+}
+
+.list-item {
+    margin: 10px 10px;
+}
+
+.list-item:hover {
+    color:red;
+}
+
+.current-true {
+    color: #0fac00;
+}
