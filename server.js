@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
+app.set('port', (process.env.PORT || 5000))
 
 var events = [
         {
@@ -33,5 +34,6 @@ app.get('/', function(req, res) {
 
 /* Add catch-routes; 404, 500 */
 
-app.listen(3000);
-console.log('Listening to port 3000...');
+app.listen(app.get('port') function() {
+    console.log('Listening to port ' + app.get('port') + '...');
+});
