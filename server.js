@@ -1,20 +1,12 @@
-var express = require('express');
+var express = require('express'),
+    cli = require('cli-color');
 
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
 app.set('port', (process.env.PORT || 5000))
 
-var events = [
-        {
-            "name": "Pub Crawl, Götgatan",
-            "description": "kfjsökdjfösjgsöfdkjgöskjgösakljfäökljvfäöaksjdföksjddfj"
-        },
-        {
-            "name": "Spökvandring i Gamla Stan",
-            "description": "fpkjsgsdfhsaghjasdlfhasdölvghbsalödhjmvfsalhjvdöfkjsdöfjk"
-        }
-    ];
+var events = require('./mock_database.js');
 
 /* 
 Add routes for:
@@ -35,5 +27,5 @@ app.get('/', function(req, res) {
 /* Add catch-routes; 404, 500 */
 
 app.listen(app.get('port'), function() {
-    console.log('Listening to port ' + app.get('port') + '...');
+    console.log(cli.green('Listening to port ' + app.get('port') + '...'));
 });

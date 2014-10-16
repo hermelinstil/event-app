@@ -10,6 +10,7 @@
   "repository": "https://github.com/hermelinstil/event-app.git",
   "license": "ISC",
   "dependencies": {
+    "cli-color": "^0.3.2",
     "express": "^4.9.7"
   }
 }
