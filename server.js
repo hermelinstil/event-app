@@ -1,31 +1,21 @@
 var express = require('express'),
-    cli = require('cli-color');
+    cli = require('cli-color'),
+    port = process.env.PORT || 5000;
 
 var app = express();
 
+
+/* Load database */
+var events = require('./config/mock_database.js');
+
+/* Set static directory */
 app.use(express.static(__dirname + '/public'));
-app.set('port', (process.env.PORT || 5000))
 
-var events = require('./mock_database.js');
+/* Load routes */
+require('./config/routes.js')(app, events);
 
-/* 
-Add routes for:
-    -getting all events
-    -add 'coming-to' for event
-    -add new event
-    -remove event(?)
-*/
 
-app.get('/fetch-events', function(req, res) {
-    res.json(events);
-})
-
-app.get('/', function(req, res) {
-    res.sendFile('./public/index.html');
-});
-
-/* Add catch-routes; 404, 500 */
-
-app.listen(app.get('port'), function() {
-    console.log(cli.green('Listening to port ' + app.get('port') + '...'));
+/* Start the server */
+app.listen(port, function() {
+    console.log(cli.green('Listening to port ' + port + '...'));
 });
