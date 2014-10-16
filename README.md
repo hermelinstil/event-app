@@ -3,6 +3,9 @@
 
 ```bash
 $ npm install
+```
+then
+```bash
 $ node server.js
 ```
 or
@@ -11,7 +14,7 @@ $ foreman start
 ```
 
 
-#### Heroku-link:
+#### Heroku-link
 http://aqueous-retreat-8706.herokuapp.com
 
 #### Roadmap
