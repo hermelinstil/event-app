@@ -1,7 +1,5 @@
 module.exports = function(app, events) {
     
-    
-
     app.get('/fetch-events', function(req, res) {
         res.json(events);
     });
