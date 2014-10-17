@@ -5,14 +5,18 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.wrapper {
+    margin: 0px auto;
+    width: 1300px;
+}
+
 #content-block {
     display: inline-block;
-    height: 920px;
+    height: 940px;
 }
 
 .event-detail-container {
-    width: 65%;
-    max-width: 800px;
+    width: 70%;
     margin: 0 0;
     float: left;
     
@@ -20,7 +24,6 @@ body {
     background-size: cover;
     box-shadow: inset 0 0 10px #000;
 }
-
 .event-description {
     margin: 30px auto;
     width: 90%;
@@ -36,7 +39,7 @@ body {
 }
 
 .event-list-container {
-    width: 300px;
+    width: 28%;
     margin: 0px 10px;
     border: 1px solid;
 }
